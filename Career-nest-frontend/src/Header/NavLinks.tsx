@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavLinks = () => {
     const links = [
@@ -7,12 +7,29 @@ const NavLinks = () => {
         { name: "Upload Jobs", url: "/upload-jobs" },
         { name: "About Us", url: "/about-us" }
     ]
+    const location = useLocation();
     return (
-        <div className="flex gap-5">
+        <div className="flex gap-5 items-center h-full text-mine-shaft-300">
             {
-            links.map((link, index) =>
-                <Link key={index} to={link.url}>{link.name}</Link>
-            )}
+                            links.map((link) => (
+                                <div
+                                    key={link.url}
+                                    className={`h-full flex items-center border-t-[3px] ${
+                                        location.pathname === link.url
+                                            ? "border-cerise-400 text-cerise-400"
+                                            : "border-transparent"
+                                    }`}
+                                                >
+                                                    <Link
+                                                        to={link.url}
+                                                        className="link-scan transition-colors duration-300 hover:cerise-400"
+                                                    >
+                                                        {link.name}
+                                                    </Link>
+                                </div>
+                            ))
+                        }
+
         </div>
     );
 };

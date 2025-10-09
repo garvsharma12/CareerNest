@@ -10,14 +10,21 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-semibold: 600;
     --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-mine-shaft-200: #d1d1d1;
+    --color-mine-shaft-300: #b0b0b0;
     --color-mine-shaft-800: #454545;
     --color-mine-shaft-900: #3d3d3d;
     --color-mine-shaft-950: #2d2d2d;
@@ -200,6 +207,15 @@
       max-width: 96rem;
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
   .block {
     display: block;
   }
@@ -227,6 +243,12 @@
   .h-28 {
     height: calc(var(--spacing) * 28);
   }
+  .h-\[30rem\] {
+    height: 30rem;
+  }
+  .h-full {
+    height: 100%;
+  }
   .min-h-\[100vh\] {
     min-height: 100vh;
   }
@@ -235,6 +257,12 @@
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
+  }
+  .w-\[30rem\] {
+    width: 30rem;
+  }
+  .w-\[40rem\] {
+    width: 40rem;
   }
   .w-full {
     width: 100%;
@@ -278,12 +306,29 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-t-\[3px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 3px;
+  }
+  .border-cerise-400 {
+    border-color: var(--color-cerise-400);
+  }
+  .border-transparent {
+    border-color: transparent;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -300,12 +345,23 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
+  .text-center {
+    text-align: center;
+  }
   .font-\[poppins\] {
     font-family: poppins;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -317,8 +373,23 @@
   .text-cerise-400 {
     color: var(--color-cerise-400);
   }
+  .text-mine-shaft-200 {
+    color: var(--color-mine-shaft-200);
+  }
+  .text-mine-shaft-300 {
+    color: var(--color-mine-shaft-300);
+  }
   .text-white {
     color: var(--color-white);
+  }
+  .text-white\/80 {
+    color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
@@ -352,10 +423,33 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
   .hover\:bg-mine-shaft-800 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-mine-shaft-800);
+      }
+    }
+  }
+  .hover\:text-cerise-400 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-cerise-400);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
@@ -548,6 +642,10 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -595,6 +693,7 @@
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
     }
   }
 }

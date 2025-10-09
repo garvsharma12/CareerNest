@@ -1,2 +1,31 @@
 /* Custom non-Tailwind global styles can live here */
+
+/* Slow moving border cursor over link text */
+.link-scan {
+	position: relative;
+	display: inline-block;
+}
+.link-scan::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px; /* sits just under the text */
+	height: 2px;
+	width: 20%; /* size of the cursor */
+	background: currentColor; /* use link color */
+	transform: translateX(-100%);
+	opacity: 0;
+}
+.link-scan:hover::after {
+	opacity: 1;
+	animation: link-scan-move 3.5s linear infinite; /* slow sweep */
+}
+
+@keyframes link-scan-move {
+	0%   { transform: translateX(0%);   width: 0%;  }
+	20%  { transform: translateX(0%);   width: 25%; }
+	50%  { transform: translateX(50%);  width: 25%; }
+	80%  { transform: translateX(100%); width: 25%; }
+	100% { transform: translateX(100%); width: 0%;  }
+}
 @import './index.tailwind.css';
