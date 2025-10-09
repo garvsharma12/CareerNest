@@ -14,11 +14,15 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-semibold: 600;
+    --radius-md: 0.375rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-mine-shaft-800: #454545;
+    --color-mine-shaft-900: #3d3d3d;
     --color-mine-shaft-950: #2d2d2d;
+    --color-cerise-400: #f076c0;
   }
 }
 @layer base {
@@ -227,6 +231,9 @@
   .min-h-\[100vh\] {
     min-height: 100vh;
   }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -247,6 +254,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -269,6 +279,12 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -276,8 +292,14 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-mine-shaft-900 {
+    background-color: var(--color-mine-shaft-900);
+  }
   .bg-mine-shaft-950 {
     background-color: var(--color-mine-shaft-950);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -298,6 +320,9 @@
   }
   .text-blue-500 {
     color: var(--color-blue-500);
+  }
+  .text-cerise-400 {
+    color: var(--color-cerise-400);
   }
   .text-white {
     color: var(--color-white);
@@ -336,6 +361,13 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .hover\:bg-mine-shaft-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-mine-shaft-800);
+      }
+    }
   }
 }
 @property --tw-rotate-x {
