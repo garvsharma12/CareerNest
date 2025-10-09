@@ -2,7 +2,7 @@ import { Avatar } from "@mantine/core";
 import {IconCircleDottedLetterC, IconBell, IconSettings } from "@tabler/icons-react";
 
 const Header = () => {
-    return <div className="w-full bg-black text-white px-6 h-28 flex justify-between items-center">
+    return <div className="w-full bg-mine-shaft-950 px-6 text-white h-28 flex justify-between items-center">
 
         <div className="flex gap-3 items-center">
             <IconCircleDottedLetterC className="h-10 w-10" />

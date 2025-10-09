@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -17,6 +18,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-mine-shaft-950: #2d2d2d;
   }
 }
 @layer base {
@@ -168,6 +170,9 @@
   }
 }
 @layer utilities {
+  .\@container {
+    container-type: inline-size;
+  }
   .visible {
     visibility: visible;
   }
@@ -204,6 +209,12 @@
   .hidden {
     display: none;
   }
+  .inline {
+    display: inline;
+  }
+  .table {
+    display: table;
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -212,6 +223,9 @@
   }
   .h-28 {
     height: calc(var(--spacing) * 28);
+  }
+  .min-h-\[100vh\] {
+    min-height: 100vh;
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -262,8 +276,14 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-mine-shaft-950 {
+    background-color: var(--color-mine-shaft-950);
+  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .font-\[poppins\] {
+    font-family: poppins;
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -276,8 +296,14 @@
   .text-wrap {
     text-wrap: wrap;
   }
+  .text-blue-500 {
+    color: var(--color-blue-500);
+  }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;

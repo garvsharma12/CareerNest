@@ -1,4 +1,35 @@
 @import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
+
+/* Custom theme tokens for Tailwind v4 */
+@theme {
+  /* mine-shaft palette */
+  --color-mine-shaft-50: #f6f6f6;
+  --color-mine-shaft-100: #e7e7e7;
+  --color-mine-shaft-200: #d1d1d1;
+  --color-mine-shaft-300: #b0b0b0;
+  --color-mine-shaft-400: #888888;
+  --color-mine-shaft-500: #6d6d6d;
+  --color-mine-shaft-600: #5d5d5d;
+  --color-mine-shaft-700: #4f4f4f;
+  --color-mine-shaft-800: #454545;
+  --color-mine-shaft-900: #3d3d3d;
+  --color-mine-shaft-950: #2d2d2d;
+
+  /* cerise palette */
+  --color-cerise-50: #fdf2f9;
+  --color-cerise-100: #fbe8f4;
+  --color-cerise-200: #fad0eb;
+  --color-cerise-300: #f7aada;
+  --color-cerise-400: #f076c0;
+  --color-cerise-500: #e74da5;
+  --color-cerise-600: #d93e8f;
+  --color-cerise-700: #b91d6a;
+  --color-cerise-800: #991b58;
+  --color-cerise-900: #801b4c;
+  --color-cerise-950: #4e0929;
+}
 
 /* Tell Tailwind v4 where to scan for classes */
 @source "./**/*.{html,js,jsx,ts,tsx}";

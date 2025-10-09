@@ -1,1 +1,2 @@
 /* Custom non-Tailwind global styles can live here */
+@import './index.tailwind.css';

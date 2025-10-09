@@ -28,8 +28,8 @@
     "start": "npm run start:dev",
     "start:dev": "concurrently -n CRA,TAILWIND -c yellow,cyan \"npm:start:cra\" \"npm:dev:css\"",
     "build": "react-scripts build",
-    "dev:css": "tailwindcss -i ./src/tailwind.css -o ./src/index.tailwind.css --watch --content ./src/**/*.{js,jsx,ts,tsx,html} --content ./public/index.html",
-    "build:css": "tailwindcss -i ./src/tailwind.css -o ./src/index.tailwind.css --minify --content ./src/**/*.{js,jsx,ts,tsx,html} --content ./public/index.html",
+  "dev:css": "tailwindcss -i ./src/tailwind.css -o ./src/index.tailwind.css --watch --content ./src/**/*.{js,jsx,ts,tsx,html} --content ./public/index.html",
+  "build:css": "tailwindcss -i ./src/tailwind.css -o ./src/index.tailwind.css --minify --content ./src/**/*.{js,jsx,ts,tsx,html} --content ./public/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
