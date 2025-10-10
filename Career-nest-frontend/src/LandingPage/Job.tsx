@@ -37,13 +37,27 @@ const Job = () => {
                     <div className="absolute top-[39%] w-fit border-2 border-cerise-400 rounded-lg p-2 backdrop-blur-md bg-transparent">
                         <div className="text-center text-mine-shaft-200">10K+ got jobs</div>
                         <Avatar.Group>
-                            <Avatar src="image.png" />
-                            <Avatar src="image.png" />
-                            <Avatar src="image.png" />
+                            <Avatar src="avatar1.png" />
+                            <Avatar src="avatar2.png" />
+                            <Avatar src="avatar3.png" />
                             <Avatar>+9</Avatar>
                         </Avatar.Group>
                     </div>
                     <div>
+                        <div>
+                            <div className="absolute top-[77%] left-[55%] w-fit border-2 border-cerise-400 rounded-lg p-2 backdrop-blur-md bg-transparent flex items-center gap-3">
+                                <img src="/google.png" alt="google" className="h-10 w-10 rounded-md border border-cerise-400 filter brightness-75"/>
+                                <div className="flex flex-col items-start w-[220px]">
+                                    <div className="text-mine-shaft-100">Software Engineer</div>
+                                    <div className="text-mine-shaft-100 text-sm">Gurgaon</div>
+                                    <div className="flex items-center gap-2 text-mine-shaft-200 text-xs mt-1">
+                                        <span>1 day ago</span>
+                                        <span className="inline-block h-1 w-1 rounded-full bg-mine-shaft-400"></span>
+                                        <span>120 applicants</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
