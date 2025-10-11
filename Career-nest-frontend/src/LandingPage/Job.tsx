@@ -46,7 +46,7 @@ const Job = () => {
                     <div>
                         <div>
                             <div className="absolute top-[77%] left-[55%] w-fit border-2 border-cerise-400 rounded-lg p-2 backdrop-blur-md bg-transparent flex items-center gap-3">
-                                <img src="/Companies/Google.png" alt="google" className="h-10 w-16 rounded-md border border-cerise-400 filter brightness-75"/>
+                                <img src="/Companies/google.png" alt="google" className="h-10 w-10 rounded-md border border-cerise-400 filter brightness-75"/>
                                 <div className="flex flex-col items-start w-[220px]">
                                     <div className="text-mine-shaft-100">Software Engineer</div>
                                     <div className="text-mine-shaft-100 text-sm">Gurgaon</div>

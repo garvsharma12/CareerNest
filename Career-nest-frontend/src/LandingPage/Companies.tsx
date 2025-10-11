@@ -9,7 +9,7 @@ const Companies = () => {
             <div className="text-4xl mb-10 font-semibold text-center text-mine-shaft-100">
                 Trusted By <span className="text-cerise-400 font-semibold">1000+</span> Companies
             </div>
-            <Marquee>
+            <Marquee pauseOnHover={true} gradient={false}>
                 {
                     companies.map((company, index) =><div key={index} className="mx-8 px-2 py-1 hover:scale-110 transition-transform">
                         <img className="h-14 " src={`/Companies/${company}.png`} alt={company} />
