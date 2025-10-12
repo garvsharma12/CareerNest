@@ -14,6 +14,8 @@
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -27,6 +29,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-tight: 1.25;
+    --leading-relaxed: 1.625;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
@@ -39,6 +42,7 @@
     --color-mine-shaft-200: #d1d1d1;
     --color-mine-shaft-300: #b0b0b0;
     --color-mine-shaft-400: #888888;
+    --color-mine-shaft-600: #5d5d5d;
     --color-mine-shaft-800: #454545;
     --color-mine-shaft-900: #3d3d3d;
     --color-mine-shaft-950: #2d2d2d;
@@ -297,6 +301,9 @@
       max-width: 96rem;
     }
   }
+  .mx-4 {
+    margin-inline: calc(var(--spacing) * 4);
+  }
   .mx-8 {
     margin-inline: calc(var(--spacing) * 8);
   }
@@ -411,6 +418,9 @@
   .w-36 {
     width: calc(var(--spacing) * 36);
   }
+  .w-72 {
+    width: calc(var(--spacing) * 72);
+  }
   .w-\[40rem\] {
     width: 40rem;
   }
@@ -435,6 +445,9 @@
   .flex-shrink {
     flex-shrink: 1;
   }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
   .flex-grow {
     flex-grow: 1;
   }
@@ -453,6 +466,9 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -489,6 +505,9 @@
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -550,6 +569,9 @@
   .object-contain {
     object-fit: contain;
   }
+  .object-cover {
+    object-fit: cover;
+  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -558,6 +580,9 @@
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-10 {
     padding: calc(var(--spacing) * 10);
@@ -610,6 +635,10 @@
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -625,6 +654,10 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
   }
   .leading-tight {
     --tw-leading: var(--leading-tight);
@@ -655,6 +688,9 @@
   }
   .text-mine-shaft-400 {
     color: var(--color-mine-shaft-400);
+  }
+  .text-mine-shaft-600 {
+    color: var(--color-mine-shaft-600);
   }
   .text-white {
     color: var(--color-white);
@@ -741,6 +777,16 @@
       }
     }
   }
+  .sm\:w-80 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 80);
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .md\:top-\[32\%\] {
     @media (width >= 48rem) {
       top: 32%;
@@ -766,6 +812,26 @@
       margin-top: calc(var(--spacing) * -10);
     }
   }
+  .md\:mt-6 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:mt-10 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:mt-16 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:mt-20 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 20);
+    }
+  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -784,6 +850,11 @@
   .lg\:left-\[16\%\] {
     @media (width >= 64rem) {
       left: 16%;
+    }
+  }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .\[\&_input\]\:\!text-mine-shaft-100 {

@@ -9,7 +9,7 @@ const Working = () => {
       </div>
 
       <div className="text-lg text-mine-shaft-300 text-center w-1/2 mx-auto mb-0">
-        Discover how CareerNest connects job seekers with their dream jobs and employers with top talent.
+        Helping talent and opportunity find each other.
       </div>
 
   <div className="flex gap-5 px-3 justify-between items-center -mt-6 md:-mt-10 relative">
