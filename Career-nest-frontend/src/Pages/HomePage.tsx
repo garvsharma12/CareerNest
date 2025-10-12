@@ -1,5 +1,6 @@
 import Header from "../Header/Header";
 import Companies from "../LandingPage/Companies";
+import Footer from "../LandingPage/Footer";
 import Job from "../LandingPage/Job";
 import JobCategory from "../LandingPage/JobCategory";
 import Reviews from "../LandingPage/Reviews";
@@ -13,6 +14,7 @@ const HomePage = () => {
             <JobCategory/>
             <Working/>
             <Reviews/>
+            <Footer/>
         </div>
     )
 }
