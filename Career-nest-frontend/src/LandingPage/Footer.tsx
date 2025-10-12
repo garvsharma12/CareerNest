@@ -24,7 +24,7 @@ const Footer = () => {
                     {/* Link Columns */}
                     {footerLinks.map((section) => (
                         <div key={section.title}>
-                            <div className="text-lg font-semibold mb-3 text-mine-shaft-100">
+                            <div className="text-lg font-semibold mb-3 text-cerise-400">
                                 {section.title}
                             </div>
                             <ul className="space-y-2">
