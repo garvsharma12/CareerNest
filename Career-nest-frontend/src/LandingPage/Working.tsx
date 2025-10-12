@@ -7,11 +7,11 @@ const Working = () => {
         How <span className="text-cerise-400 font-semibold">CareerNest</span> Works
       </div>
 
-      <div className="text-lg text-mine-shaft-300 text-center w-1/2 mx-auto mb-1">
+      <div className="text-lg text-mine-shaft-300 text-center w-1/2 mx-auto mb-0">
         Discover how CareerNest connects job seekers with their dream jobs and employers with top talent.
       </div>
 
-      <div className="flex gap-5 px-3 justify-between items-center -mt-2 md:-mt-3">
+  <div className="flex gap-5 px-3 justify-between items-center -mt-6 md:-mt-10">
         <img
           className="w-[50rem]"
           src="Working/girl.png"
