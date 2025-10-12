@@ -29,6 +29,7 @@
     --leading-tight: 1.25;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --blur-md: 12px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -203,14 +204,77 @@
   .absolute {
     position: absolute;
   }
+  .relative {
+    position: relative;
+  }
   .static {
     position: static;
+  }
+  .top-\[8\%\] {
+    top: 8%;
+  }
+  .top-\[25\%\] {
+    top: 25%;
+  }
+  .top-\[27\%\] {
+    top: 27%;
+  }
+  .top-\[28\%\] {
+    top: 28%;
+  }
+  .top-\[30\%\] {
+    top: 30%;
+  }
+  .top-\[33\%\] {
+    top: 33%;
+  }
+  .top-\[34\%\] {
+    top: 34%;
   }
   .top-\[39\%\] {
     top: 39%;
   }
   .top-\[77\%\] {
     top: 77%;
+  }
+  .top-\[80\%\] {
+    top: 80%;
+  }
+  .top-\[100\%\] {
+    top: 100%;
+  }
+  .top-\[250\%\] {
+    top: 250%;
+  }
+  .top-\[260\%\] {
+    top: 260%;
+  }
+  .top-\[270\%\] {
+    top: 270%;
+  }
+  .top-\[280\%\] {
+    top: 280%;
+  }
+  .top-\[300\%\] {
+    top: 300%;
+  }
+  .top-\[800\%\] {
+    top: 800%;
+  }
+  .left-\[7\%\] {
+    left: 7%;
+  }
+  .left-\[10\%\] {
+    left: 10%;
+  }
+  .left-\[12\%\] {
+    left: 12%;
+  }
+  .left-\[22\%\] {
+    left: 22%;
+  }
+  .left-\[24\%\] {
+    left: 24%;
   }
   .left-\[55\%\] {
     left: 55%;
@@ -293,6 +357,9 @@
   .table {
     display: table;
   }
+  .\!h-12 {
+    height: calc(var(--spacing) * 12) !important;
+  }
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
@@ -317,6 +384,15 @@
   .min-h-\[100vh\] {
     min-height: 100vh;
   }
+  .\!w-12 {
+    width: calc(var(--spacing) * 12) !important;
+  }
+  .\!w-18 {
+    width: calc(var(--spacing) * 18) !important;
+  }
+  .\!w-120 {
+    width: calc(var(--spacing) * 120) !important;
+  }
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
@@ -331,6 +407,9 @@
   }
   .w-13 {
     width: calc(var(--spacing) * 13);
+  }
+  .w-36 {
+    width: calc(var(--spacing) * 36);
   }
   .w-\[40rem\] {
     width: 40rem;
@@ -423,6 +502,9 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -477,6 +559,9 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -494,6 +579,12 @@
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
@@ -561,6 +652,9 @@
   }
   .text-mine-shaft-300 {
     color: var(--color-mine-shaft-300);
+  }
+  .text-mine-shaft-400 {
+    color: var(--color-mine-shaft-400);
   }
   .text-white {
     color: var(--color-white);
@@ -647,6 +741,16 @@
       }
     }
   }
+  .md\:top-\[32\%\] {
+    @media (width >= 48rem) {
+      top: 32%;
+    }
+  }
+  .md\:left-\[20\%\] {
+    @media (width >= 48rem) {
+      left: 20%;
+    }
+  }
   .md\:-mt-3 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * -3);
@@ -662,9 +766,24 @@
       margin-top: calc(var(--spacing) * -10);
     }
   }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
+    }
+  }
   .md\:gap-10 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:top-\[39\%\] {
+    @media (width >= 64rem) {
+      top: 39%;
+    }
+  }
+  .lg\:left-\[16\%\] {
+    @media (width >= 64rem) {
+      left: 16%;
     }
   }
   .\[\&_input\]\:\!text-mine-shaft-100 {

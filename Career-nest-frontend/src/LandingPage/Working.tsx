@@ -1,3 +1,4 @@
+import { Avatar } from "@mantine/core";
 import { work } from "../Data/Data";
 
 const Working = () => {
@@ -11,12 +12,17 @@ const Working = () => {
         Discover how CareerNest connects job seekers with their dream jobs and employers with top talent.
       </div>
 
-  <div className="flex gap-5 px-3 justify-between items-center -mt-6 md:-mt-10">
+  <div className="flex gap-5 px-3 justify-between items-center -mt-6 md:-mt-10 relative">
         <img
           className="w-[50rem]"
           src="Working/girl.png"
           alt="A girl working on a laptop"
         />
+    <div className="w-36 flex flex-col items-center gap-2 border border-cerise-400 rounded-xl p-3 backdrop-blur-md bg-transparent absolute top-[30%] left-[7%] text-center">
+      <Avatar className="!h-12 !w-12" src="avatar3.png" alt="avatar3" />
+      <div className="text-mine-shaft-100 font-semibold text-sm">Complete Your Profile</div>
+      <div className="text-mine-shaft-200 text-sm">80% completed</div>
+    </div>
   <div className="flex flex-col gap-8 md:gap-10">
           {work.map((item) => (
             <div key={item.name} className="flex items-center gap-4">
