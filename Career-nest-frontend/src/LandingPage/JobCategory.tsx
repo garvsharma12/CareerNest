@@ -7,9 +7,13 @@ const JobCategory = () => {
             <div className="text-lg text-mine-shaft-300 text-center w-1/2 mx-auto">
                 Explore various job categories and find the perfect fit for your skills and interests.
             </div>
+
             <div>
-                
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
+            
         </div>
     );
 }
