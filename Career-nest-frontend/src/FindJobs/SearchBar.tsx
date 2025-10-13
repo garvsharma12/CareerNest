@@ -1,4 +1,4 @@
-import { MultiSelect } from "@mantine/core";
+import MultiSelect from "./MultiSelect";
 
 const SearchBar = () => {
     return (
