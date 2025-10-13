@@ -3,7 +3,7 @@ import {IconCircleDottedLetterC, IconBell, IconSettings } from "@tabler/icons-re
 import NavLinks from "./NavLinks";
 
 const Header = () => {
-    return <div className="w-full bg-mine-shaft-950 px-6 text-white h-28 flex justify-between items-center">
+    return <div className="w-full bg-mine-shaft-950 px-6 text-white h-28 flex justify-between items-center bg-mine-shaft-950 font-[poppins]">
 
         <div className="flex gap-3 items-center text-cerise-400">
             <IconCircleDottedLetterC className="h-10 w-10" />

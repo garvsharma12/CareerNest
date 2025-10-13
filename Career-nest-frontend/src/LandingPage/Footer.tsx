@@ -2,7 +2,7 @@ import { footerLinks } from "../Data/Data";
 
 const Footer = () => {
     return (
-        <footer className="bg-mine-shaft-900 text-mine-shaft-100 mt-14">
+        <footer className="bg-mine-shaft-900 text-mine-shaft-100 pt-14 bg-mine-shaft-950 font-[poppins]">
             <div className="px-6 py-10 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Brand / Description */}
